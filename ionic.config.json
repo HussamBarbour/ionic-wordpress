@@ -1,0 +1,7 @@
+{
+  "name": "wordpress",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
