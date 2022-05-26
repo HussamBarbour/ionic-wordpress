@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="" defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="post" [innerHtml]="post.title.rendered"></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  *ngIf="post">
+  <ion-img class="image" [src]="post | post:'image'"></ion-img>
+  <div class="ion-padding">
+    <h1><p [innerHtml]="post.title.rendered"></p></h1>
+    <p [innerHtml]="post.content.rendered"></p>
+    <app-comments [post]="post"></app-comments>
+  </div>
+
+</ion-content>

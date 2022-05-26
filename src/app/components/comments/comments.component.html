@@ -1,0 +1,29 @@
+<ion-list>
+  <ion-list-header> Comments </ion-list-header>
+
+  <ion-item *ngFor="let comment of comments">
+    <ion-avatar slot="start">
+      <ion-img [src]="comment.author_avatar_urls[96]"></ion-img>
+    </ion-avatar>
+    <ion-label>
+      <h2 [innerHtml]="comment.author_name"></h2>
+      <p [innerHtml]="comment.content.rendered"></p>
+    </ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Comment *</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Name *</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Email *</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Website</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+</ion-list>

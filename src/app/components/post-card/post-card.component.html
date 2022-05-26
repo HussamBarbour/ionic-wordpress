@@ -1,0 +1,8 @@
+<ion-card>
+  <ion-img class="image" [src]="post | post:'image'" (click)="openPost(post)"></ion-img>
+  <ion-card-header>
+    <ion-card-title [innerHtml]="post.title.rendered" (click)="openPost(post)"></ion-card-title>
+  </ion-card-header>
+  <ion-card-content [innerHtml]="post | post:'excerpt':[200]">
+  </ion-card-content>
+</ion-card>

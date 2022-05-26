@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ng-container *ngFor="let post of posts">
+    <app-post-card [post]="post"></app-post-card>
+  </ng-container>
+  <ion-infinite-scroll threshold="100px" *ngIf="hasMoreItems" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content
+    loadingText="Loading more">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
