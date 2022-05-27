@@ -94,6 +94,7 @@ export class WpAuthService {
             Accept: 'application/json',
             Authorization: `${this.token}`
         };
+        console.log(this.token);
         return new Promise((resolve, reject) => {
             if (this.platform.is('hybrid')) {
                 this.httpNative.post(this.url + '/token/validate?refresh-c=' + new Date().getTime(),{},headers)

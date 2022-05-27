@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { PostCardComponent, CommentsComponent } from  './components';
 import { PostPipe } from './pipes/PostPipe';
+import { NgxPermissionsModule } from 'ngx-permissions';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { PostPipe } from './pipes/PostPipe';
     exports: [
         PostCardComponent,
         CommentsComponent,
-        PostPipe
+        PostPipe,
+        NgxPermissionsModule
     ]
 })
 export class SharedModule { }
